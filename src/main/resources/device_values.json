@@ -1,0 +1,37 @@
+[ {
+  "deviceId" : "1",
+  "values" : [ {
+    "propertyId" : "1",
+    "propertyValue" : "Off"
+  } ]
+}, {
+  "deviceId" : "2",
+  "values" : [ {
+    "propertyId" : "3",
+    "propertyValue" : "23"
+  } ]
+}, {
+  "deviceId" : "3",
+  "values" : [ {
+    "propertyId" : "1",
+    "propertyValue" : "On"
+  } ]
+}, {
+  "deviceId" : "4",
+  "values" : [ {
+    "propertyId" : "1",
+    "propertyValue" : "On"
+  } ]
+}, {
+  "deviceId" : "5",
+  "values" : [ {
+    "propertyId" : "1",
+    "propertyValue" : "On"
+  } ]
+}, {
+  "deviceId" : "6",
+  "values" : [ {
+    "propertyId" : "1",
+    "propertyValue" : "Cooling"
+  } ]
+} ]

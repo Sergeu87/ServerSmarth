@@ -1,0 +1,18 @@
+POST http://localhost:9000/device
+Content-Type: application/json
+
+{
+  "deviceId": "1",
+  "values": [
+    {
+      "propertyId": "2",
+      "propertyValue": "0"
+    },
+    {
+      "propertyId": "1",
+      "propertyValue": "OFF"
+    }
+  ]
+}
+
+###

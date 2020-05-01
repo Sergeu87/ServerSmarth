@@ -1,0 +1,10 @@
+POST http://localhost:9000/register
+Content-Type: application/json
+
+{
+  "name": "TEST NAME",
+  "password": "123",
+  "accessLevel": "9"
+}
+
+###

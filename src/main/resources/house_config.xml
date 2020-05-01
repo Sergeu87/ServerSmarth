@@ -1,0 +1,137 @@
+<house_config>
+  <house id="1" name="Villa Silva" address="Av. das Laranjeiras" phone="215254632"/>
+  <devices>
+    <device id="1" ref_device_type="1" name="Kitchen Lamp" address="#0100" ref_division="1">
+      <access_levels>
+        <access_level>3</access_level>
+        <access_level>5</access_level>
+      </access_levels>
+      <users_blocked>
+        <user_blocked>-</user_blocked>
+        <user_blocked>27</user_blocked>
+      </users_blocked>
+    </device>
+    <device id="2" ref_device_type="2" name="Temperature Sensor" address="#0100" ref_division="2">
+      <access_levels>
+        <access_level>3</access_level>
+        <access_level>5</access_level>
+      </access_levels>
+      <users_blocked>
+        <user_blocked>-</user_blocked>
+        <user_blocked>27</user_blocked>
+      </users_blocked>
+    </device>
+    <device id="3" ref_device_type="4" name="Kitchen Oven" address="#0100" ref_division="2">
+      <access_levels>
+        <access_level>3</access_level>
+        <access_level>5</access_level>
+      </access_levels>
+      <users_blocked>
+        <user_blocked>-</user_blocked>
+        <user_blocked>27</user_blocked>
+      </users_blocked>
+    </device>
+    <device id="4" ref_device_type="4" name="Kitchen Lamp" address="#0100" ref_division="3">
+      <access_levels>
+        <access_level>3</access_level>
+        <access_level>5</access_level>
+      </access_levels>
+      <users_blocked>
+        <user_blocked>-</user_blocked>
+        <user_blocked>27</user_blocked>
+      </users_blocked>
+    </device>
+    <device id="5" ref_device_type="4" name="Kitchen Lamp" address="#0100" ref_division="4">
+      <access_levels>
+        <access_level >3</access_level>
+        <access_level>5</access_level>
+      </access_levels>
+      <users_blocked>
+        <user_blocked>-</user_blocked>
+        <user_blocked>27</user_blocked>
+      </users_blocked>
+    </device>
+    <device id="6" ref_device_type="5" name="Conditioner" address="#0100" ref_division="4">
+      <access_levels>
+        <access_level>3</access_level>
+        <access_level>5</access_level>
+      </access_levels>
+      <users_blocked>
+        <user_blocked>-</user_blocked>
+        <user_blocked>27</user_blocked>
+      </users_blocked>
+    </device>
+  </devices>
+  <device_types>
+    <device_type id="1" name="Adjustable light" description="-" ref_device_class="1">
+      <property_list>
+        <property_list id="1" name="On-Off" access_mode="RW" value_type="ENUM" ref_value_type="1"/>
+        <property_list id="2" name="Intensity" access_mode="RW" value_type="SCALAR" ref_value_type="1"/>
+      </property_list>
+    </device_type>
+    <device_type id="2" name="Temperature Sensor" description="-" ref_device_class="2">
+      <property_list>
+        <property_list id="3" name="Temperature" access_mode="RO" value_type="SCALAR" ref_value_type="1"/>
+      </property_list>
+    </device_type>
+    <device_type id="4" name="Oven" description=" - " ref_device_class="">
+      <property_list>
+        <property_list id="1" name="State" access_mode="RW" value_type="ENUM" ref_value_type="1"/>
+      </property_list>
+    </device_type>
+    <device_type id="5" name="Humidity Ratio" description=" - " ref_device_class="">
+      <property_list>
+        <property_list id="1" name="State" access_mode="RW" value_type="ENUM" ref_value_type="2"/>
+        <property_list id="2" name="Ratio" access_mode="RW" value_type="SCALAR" ref_value_type="2"/>
+      </property_list>
+    </device_type>
+  </device_types>
+  <services>
+    <service id="1" name="Heating"/>
+    <service id="2" name="Lighting"/>
+    <service id="3" name="Security"/>
+    <service id="4" name="Appliances"/>
+    <service id="5" name="Irrigation"/>
+  </services>
+  <floors>
+    <floor id="1" name="Ground-floor" height_order="0"/>
+  </floors>
+  <divisions>
+    <division id="1" name="Bedroom" ref_floor="1" access_level="1" ref_division_type="1"/>
+    <division id="2" name="Kitchen" ref_floor="1" access_level="3" ref_division_type="2"/>
+    <division id="3" name="Living-room" ref_floor="1" access_level="2" ref_division_type="6"/>
+    <division id="4" name="Bathroom" ref_floor="1" access_level="2" ref_division_type="3"/>
+  </divisions>
+  <division_types>
+    <division_type id="1" name="Bedroom"/>
+    <division_type id="2" name="Kitchen"/>
+    <division_type id="3" name="Bathroom"/>
+    <division_type id="4" name="Hall"/>
+    <division_type id="5" name="Attic"/>
+    <division_type id="6" name="Living-room"/>
+    <division_type id="7" name="Garden"/>
+  </division_types>
+  <users>
+    <user id="1" name="serg" password="123" access_level="9"/>
+    <user id="2" name="1" password="1" access_level="9"/>
+  </users>
+  <scalar_values>
+    <scalar_value name="Percentage (0-100)" step="1" min_value="0" num_bits="8" units="%" scalar_id="1" max_value="100"/>
+    <scalar_value name="Power" step="10" min_value="0" num_bits="16" units="Watt" scalar_id="2" max_value="1000"/>
+  </scalar_values>
+  <enum_values>
+    <enum_value name="On-Off" enum_id="1">
+      <enumerated>
+        <enumerated name="Off" value="0"/>
+        <enumerated name="On" value="1"/>
+      </enumerated>
+    </enum_value>
+    <enum_value name="Air Conditioning Commands" enum_id="2">
+      <enumerated>
+        <enumerated name="Off" value="0"/>
+        <enumerated name="Heating" value="1"/>
+        <enumerated name="Cooling" value="2"/>
+      </enumerated>
+    </enum_value>
+  </enum_values>
+</house_config>
